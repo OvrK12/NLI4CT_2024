@@ -12,7 +12,7 @@ def load_and_split_dataset():
     Returns:
         train, val and test split of the dataset
     """
-    dataset = load_dataset(DATASET_LOCATION, name=DATASET_LOCATION)
+    dataset = load_dataset(DATASET_LOCATION, name=DATASET_SOURCE)
     train_data, val_data, test_data = dataset['train'], dataset['validation'], dataset['test']
     return train_data, val_data, test_data
 
