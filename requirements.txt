@@ -1,0 +1,15 @@
+datasets==2.16.1
+evaluate==0.4.1
+huggingface_hub==0.20.2
+matplotlib==3.8.2
+nltk==3.8.1
+numpy==1.25.2
+openai==1.14.1
+pandas==2.2.1
+peft==0.7.1
+scikit-learn==1.4.0
+tenacity==8.2.3
+torch==2.1.2
+tqdm==4.66.1
+transformers==4.37.0
+wandb==0.16.0

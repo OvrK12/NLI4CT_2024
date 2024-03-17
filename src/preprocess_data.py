@@ -71,7 +71,7 @@ def preprocess_dataset(dataset, ct_reports_dict):
     # create a statement column from the existing the columns which is used as the input for the HF model
     dataset = dataset.map(lambda row: create_statement_column(row, ct_reports_dict))
     # drop all columns that are not needed for the model. Only input is the statement column which predicts the label
-    dataset = dataset.remove_columns(["type", "section_id", "primary_id", "secondary_id", "id"])
+    #dataset = dataset.remove_columns(["type", "section_id", "primary_id", "secondary_id", "id"])
     # HF expects a "text" column as input -> rename statement column
     dataset = dataset.rename_column("statement", "text")
     return dataset
@@ -87,6 +87,7 @@ def save_dataset_to_json(dataset, save_location, filename):
     dataset.to_json(os.path.join(save_location, filename))
 
 def main():
+    print(os.path.join(SAVE_LOCATION, "test"))
     train_data, val_data, test_data = load_and_split_dataset()
     ct_reports_dict = load_clinical_trial_reports()
 

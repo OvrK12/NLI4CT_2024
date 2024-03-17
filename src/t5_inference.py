@@ -8,10 +8,10 @@ from sklearn.metrics import precision_score, recall_score, f1_score
 # HF id for model/tokenizer
 MODEL_ID = "OvrK12/t5Seq2SeqBase1027"
 # location of the data folder
-DATA_LOCATION = "./data/"
+DATA_LOCATION = "../data/"
 # the data split on which you want to evaluate the model
 DATA_SPLIT = 'val'
-
+ 
 class T5Inference(): 
     def __init__(self, model_id) -> None:
         # init model and tokenizer
